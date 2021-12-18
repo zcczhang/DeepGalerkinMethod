@@ -175,9 +175,9 @@ if saveOutput:
 
 #%% Plot results
 
-# LaTeX rendering for text in plots
-plt.rc('text', usetex=True)
-plt.rc('font', family='serif')
+# # LaTeX rendering for text in plots
+# plt.rc('text', usetex=True)
+# plt.rc('font', family='serif')
 
 # figure options
 plt.figure()

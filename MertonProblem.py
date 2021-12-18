@@ -42,9 +42,9 @@ t_oversample = 0.5
 n_plot = 41  # Points on plot grid for each dimension
 
 # Save options
-saveOutput = False
+saveOutput = True
 saveName   = 'MertonProblem'
-saveFigure = False
+saveFigure = True
 figureName = 'MertonProblem'
 
 #%% Analytical Solution
@@ -335,7 +335,7 @@ fitted_value_function_mesh = np.reshape(fitted_value_function, [n_plot, n_plot])
 plt.figure()
 plt.figure(figsize = (8,6))
 
-plt.pcolormesh(t_mesh, X_mesh, np.abs(value_function_mesh - fitted_value_function_mesh), cmap = "rainbow")
+plt.pcolormesh(t_mesh, X_mesh, np.abs(value_function_mesh - fitted_value_function_mesh), cmap = "rainbow", shading='auto')
 
 # plot options
 plt.colorbar()
@@ -352,7 +352,7 @@ if saveFigure:
 plt.figure()
 plt.figure(figsize = (8,6))
 
-plt.pcolormesh(t_mesh, X_mesh, np.abs(1 - np.divide(fitted_value_function_mesh, value_function_mesh)), cmap = "rainbow")
+plt.pcolormesh(t_mesh, X_mesh, np.abs(1 - np.divide(fitted_value_function_mesh, value_function_mesh)), cmap = "rainbow", shading='auto')
 
 # plot options
 plt.colorbar()
@@ -391,7 +391,7 @@ fitted_optimal_control_mesh = np.reshape(fitted_optimal_control, [n_plot, n_plot
 plt.figure()
 plt.figure(figsize = (8,6))
 
-plt.pcolormesh(t_mesh, X_mesh, np.abs(optimal_control_mesh - fitted_optimal_control_mesh), cmap = "rainbow")
+plt.pcolormesh(t_mesh, X_mesh, np.abs(optimal_control_mesh - fitted_optimal_control_mesh), cmap = "rainbow", shading='auto')
 
 # plot options
 plt.colorbar()
@@ -408,7 +408,7 @@ if saveFigure:
 plt.figure()
 plt.figure(figsize = (8,6))
 
-plt.pcolormesh(t_mesh, X_mesh, np.abs(1 - np.divide(fitted_optimal_control_mesh, optimal_control_mesh)), cmap = "rainbow")
+plt.pcolormesh(t_mesh, X_mesh, np.abs(1 - np.divide(fitted_optimal_control_mesh, optimal_control_mesh)), cmap = "rainbow", shading='auto')
 
 # plot options
 plt.colorbar()

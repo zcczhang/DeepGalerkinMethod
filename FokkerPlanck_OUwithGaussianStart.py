@@ -45,9 +45,9 @@ nSim_x_interior = 50
 nSim_x_initial = 50
 
 # Save options
-saveOutput = False
+saveOutput = True
 saveName   = 'FokkerPlanck'
-saveFigure = False
+saveFigure = True
 figureName = 'fokkerPlanck_density.png'
 
 #%% OU Simulation function
@@ -252,7 +252,7 @@ for i, curr_t in enumerate(densityTimes):
     density = unnorm_dens[0] / sp.integrate.simps(unnorm_dens[0].reshape(x_plot.shape), x_plot)
     
     # plot histogram of simulated process values and overlay estimated density
-    plt.hist(sim_x, bins=40, normed=True, color = 'b')
+    plt.hist(sim_x, bins=40, color = 'b')
     plt.plot(x_plot, density, 'r', linewidth=2.5)
     
     # subplot options
